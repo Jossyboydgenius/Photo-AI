@@ -5,7 +5,7 @@ import { actionClient } from "@/lib/safe-action"
 import { checkImageProcessing } from "@/lib/check-processing"
 
 cloudinary.config({
-  cloud_name: "dc2yzmsnc",
+  cloud_name: process.env.CLOUDINARY_NAME, // Updated to use environment variable
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET,
 })
